@@ -2,11 +2,24 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
+
+/**
+ * Algoritmos y Estructura de Datos
+ * Universidad del Valle de Guatemala
+ * Hoja de Trabajo No.8
+ * File: Main
+ * @author Sebastián Franco - 21484
+ * @author Juan Miguel Gonzalez-Campo - 21077
+ * @version 1.1
+ * @since 28/03/2021
+ */
+
+
 public class Main {
+
     static String path = "pacientes.txt";
     
     static String line = null;
-
 
 
     
@@ -25,6 +38,5 @@ public class Main {
     }
     public static void main(String[] args){
 
-        
     }
 }

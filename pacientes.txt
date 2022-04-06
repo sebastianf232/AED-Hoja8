@@ -1,0 +1,7 @@
+Juan Perez, fractura de pierna, C
+Maria Ramirez, apendicitis, A
+Lorenzo Toledo, chikunguya, E
+Carmen Sarmientos, dolores de parto, B
+Sebastian Lozano, COVID-19, B
+Pablo Marcano, Influenza, A
+Carla Aguirre, Dolor de garganta, D
