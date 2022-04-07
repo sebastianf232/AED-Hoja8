@@ -11,7 +11,7 @@ import java.util.Vector;
  * @since 28/03/2021
  */
 
-public class vectorheap<E extends Comparable<E>>  {
+public class vectorheap<E extends Comparable<E>> implements PrioQueue<E> {
 
     private Vector<paciente> v = new Vector<paciente>();
     private int size = -1;
@@ -94,6 +94,7 @@ public class vectorheap<E extends Comparable<E>>  {
         // Function to insert a
         // new element in
         // the Binary Heap
+    
     public void insert(paciente p)
     {
         size = size + 1;
@@ -145,6 +146,7 @@ public class vectorheap<E extends Comparable<E>>  {
     
     // Function to get value of
     // the current maximum element
+    
     public paciente getMin()
     {
         return v.get(0);
