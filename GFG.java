@@ -1,18 +1,10 @@
-import java.util.PriorityQueue;
-import java.util.Vector;
-/**
- * Algoritmos y Estructura de Datos
- * Universidad del Valle de Guatemala
- * Hoja de Trabajo No.8
- * File: Heaps
- * @author Sebastián Franco - 21484
- * @author Juan Miguel Gonzalez-Campo - 21077
- * @version 1.1
- * @since 28/03/2021
- */
-
-public class vectorheap<E extends Comparable<E>>  {
-
+// Java code to implement
+// priority-queue using
+// array implementation of
+// binary heap
+import java.util.*;
+class GFG<E>{
+ 
     private Vector<paciente> v = new Vector<paciente>();
     private int size = -1;
     
@@ -42,20 +34,14 @@ public class vectorheap<E extends Comparable<E>>  {
     // the heap property
     public void shiftUp(int i)
     {
-        while (i > 0 && (v.get(parent(i)).compareTo(v.get(i)) > 0)) 
-        {
-           
-            // Swap parent and current node
-            
-            swap(parent(i), i);
-            
-        
-            // Update i to parent of i
-            i = parent(i);
-            
-            
-            
-        }
+    while (i > 0 && (v.get(parent(i)).compareTo(v.get(i)) > 0)) 
+    {
+        // Swap parent and current node
+        swap(parent(i), i);
+    
+        // Update i to parent of i
+        i = parent(i);
+    }
     }
     
     // Function to shift down the node in
@@ -69,7 +55,6 @@ public class vectorheap<E extends Comparable<E>>  {
         
         if (l <= size && v.get(l).compareTo(v.get(maxIndex)) < 0) 
         {
-            
             maxIndex = l;
         }
         
@@ -78,14 +63,12 @@ public class vectorheap<E extends Comparable<E>>  {
         
         if (r <= size && v.get(r).compareTo(v.get(maxIndex)) < 0)
         {
-            
             maxIndex = r;
         }
         
         // If i not same as maxIndex
         if (i != maxIndex)
         {
-            
             swap(i, maxIndex);
             shiftDown(maxIndex);
         }
@@ -114,8 +97,8 @@ public class vectorheap<E extends Comparable<E>>  {
         // Replace the value
         // at the root with
         // the last leaf
-        v.set(0, v.get(size));
-        
+        v.removeElementAt(0);
+        v.insertElementAt(v.get(v.size()), 0);
         size = size - 1;
         
         // Shift down the replaced
@@ -133,7 +116,7 @@ public class vectorheap<E extends Comparable<E>>  {
         v.removeElementAt(i);
         v.insertElementAt(p, i);
         
-        if (p.compareTo(oldp) < 0)
+        if (p.compareTo(oldp) > 0)
         {
             shiftUp(i);
         }
@@ -168,20 +151,12 @@ public class vectorheap<E extends Comparable<E>>  {
     public void swap(int i, int j)
     {
         paciente temp = v.get(i);
-        v.set(i, v.get(j));
-        v.set(j, temp);
+        v.removeElementAt(i);
+        v.insertElementAt(v.get(j), i);
+        v.removeElementAt(j);
+        v.insertElementAt(temp, j);
+    }
+ 
 
-        
-        
-        
-        
-        
-    }
-
-    public paciente getElement(int i){
-        return v.get(i);
-    }
-    public int getSize(){
-        return size;
-    }
 }
+ 

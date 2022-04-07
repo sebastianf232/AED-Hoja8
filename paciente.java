@@ -16,7 +16,27 @@ public class paciente implements Comparable<paciente>{
     private String name; ///nombre del paciente
     private String sintoma; ///sintoma del paciente
 
-
+    public void setName(String s){
+        this.name = s;
+    }
+    public void setPrio(String s){
+        this.prio = s;
+    }
+    public void setSintoma(String s){
+        this.sintoma = s;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public String getPrio(){
+        return this.prio;
+    }
+    public String getSintoma(){
+        return this.sintoma;
+    }
+    public String getAll(){
+        return this.name + ", "+this.sintoma+ ", "+this.prio;
+    }
 
     @Override
     public int compareTo(paciente other) { ///Compara las palabras.

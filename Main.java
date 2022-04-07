@@ -37,6 +37,27 @@ public class Main {
         }
     }
     public static void main(String[] args){
+        vectorheap<paciente> v = new vectorheap<>();
+        ArrayList<String> a = new ArrayList<>();
+        leerArchivo(path, a);
+        for (String x: a){
+            String[] temp = x.split("[,]");
+            paciente temp1 = new paciente();
+            temp1.setName(temp[0]);
+            temp1.setSintoma(temp[1]);
+            temp1.setPrio(temp[2]);
 
+            v.insert(temp1);
+            
+        }
+        System.out.println("Orden de pacientes: \n");
+        int temp2 = v.getSize();
+        for (int k = 0; k <=temp2; k++){
+            System.out.println(v.extractMin().getAll());
+        }
+        
+        
+        
+        
     }
 }
