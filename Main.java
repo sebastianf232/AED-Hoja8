@@ -40,7 +40,7 @@ public class Main {
         vectorheap<paciente> v = new vectorheap<>();
         ArrayList<String> a = new ArrayList<>();
         leerArchivo(path, a);
-        for (String x: a){
+        for (String x: a){ ///Se separan los nombres y codigos.
             String[] temp = x.split("[,]");
             paciente temp1 = new paciente();
             temp1.setName(temp[0]);
@@ -52,11 +52,9 @@ public class Main {
         }
         System.out.println("Orden de pacientes: \n");
         int temp2 = v.getSize();
-        for (int k = 0; k <=temp2; k++){
+        for (int k = 0; k <=temp2; k++){ ///Se imprimen los pacientes.
             System.out.println(v.extractMin().getAll());
         }
-        
-        
         
         
     }

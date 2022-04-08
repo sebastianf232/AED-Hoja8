@@ -52,9 +52,7 @@ public class vectorheap<E extends Comparable<E>> implements PrioQueue<E> {
         
             // Update i to parent of i
             i = parent(i);
-            
-            
-            
+
         }
     }
     
@@ -172,17 +170,14 @@ public class vectorheap<E extends Comparable<E>> implements PrioQueue<E> {
         paciente temp = v.get(i);
         v.set(i, v.get(j));
         v.set(j, temp);
-
-        
-        
-        
-        
-        
     }
 
+ ///Function to get Element located
     public paciente getElement(int i){
         return v.get(i);
     }
+
+///Function to get Size of the heap.
     public int getSize(){
         return size;
     }

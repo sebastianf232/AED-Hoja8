@@ -3,6 +3,17 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
+/**
+ * Algoritmos y Estructura de Datos
+ * Universidad del Valle de Guatemala
+ * Hoja de Trabajo No.8
+ * File: Main Collections
+ * @author Sebastián Franco - 21484
+ * @author Juan Miguel Gonzalez-Campo - 21077
+ * @version 1.1
+ * @since 28/03/2021
+ */
+
 public class MainCollections {
 
 
@@ -29,7 +40,7 @@ public class MainCollections {
         ArrayList<String> a = new ArrayList<>();
         PriorityQueue<paciente> pq = new PriorityQueue<>();
         leerArchivo(path, a);
-        for (String x: a){
+        for (String x: a){ ///Se separan los nombres, y se aniade el tipo de caso. 
             String[] temp = x.split("[,]");
             paciente temp1 = new paciente();
             temp1.setName(temp[0]);
@@ -42,7 +53,7 @@ public class MainCollections {
 
         System.out.println("Orden de pacientes: \n");
         int j = pq.size();
-        for (int k = 0; k < j; k++){
+        for (int k = 0; k < j; k++){ ///Se imprimen los pacientes
 
             System.out.println(pq.remove().getAll());
         }
